@@ -34,8 +34,11 @@ class ApplicationController < ActionController::Base
     includelist = ['ExplanationOfBenefit:patient',
                    'ExplanationOfBenefit:care-team',
                    'ExplanationOfBenefit:coverage',
-                   'ExplanationOfBenefit:insurer',
-                   'ExplanationOfBenefit:provider']
+                   #  'ExplanationOfBenefit:insurer',
+                   'ExplanationOfBenefit:provider',
+                   'ExplanationOfBenefit:coverage',
+                   'ExplanationOfBenefit:payee']
+
     parameters[:_include] = includelist
     # parameters[:_format] = "json"
     search = { parameters: parameters }
